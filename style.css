@@ -1,0 +1,75 @@
+@font-face {
+	font-family: Montserrat;
+	src: url(./fonts/Montserrat-Regular.ttf);
+}
+:root {
+	--var-backgroud: #ca1eda;
+	--var-theme: #052a42;
+}
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Montserrat";
+}
+body {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 100vh;
+	background: var(--var-backgroud);
+}
+.container {
+	display: flex;
+	align-items: center;
+  
+}
+.text {
+	color: #fff;
+	font-size: 60px;
+	font-weight: 400;
+}
+.typing {
+	margin-left: 15px;
+	height: 90px;
+	line-height: 90px;
+	overflow: hidden;
+}
+.typing li {
+	list-style: none;
+	color: var(--var-theme);
+	font-size: 60px;
+	font-weight: 700;
+	position: relative;
+	top: 0;
+	animation: typing 9s steps(3) infinite;
+	-webkit-animation: typing 9s steps(3) infinite;
+}
+@keyframes typing {
+	100% {
+		top: -265px;
+	}
+}
+.typing li span {
+	position: relative;
+}
+.typing li span::after {
+	content: "";
+	position: absolute;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background: var(--var-backgroud);
+	border-left: 2px solid white;
+	animation: cursor 3s steps(10) infinite;
+	-webkit-animation: cursor 3s steps(10) infinite;
+}
+@keyframes cursor {
+	40%,
+	60% {
+		left: calc(100% + 30px);
+	}
+	100% {
+		left: 0;
+	}
+}
